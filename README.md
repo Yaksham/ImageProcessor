@@ -1,3 +1,6 @@
+- [Overview](https://github.com/Yaksham/ImageProcessor/edit/main/README.md#overview)
+- [Installation](https://github.com/Yaksham/ImageProcessor/edit/main/README.md#installation)
+
 ## Overview
 
 The project is a backend service built using FastAPI, SQL DB and FastAPI Background Tasks for async, non blocking processing. The application handles CSV uploads containing product and image URLs, processes images (including compression and transformation), and stores data in a SQLite database using SQLAlchemy with asynchronous support.
@@ -99,3 +102,23 @@ The project is a backend service built using FastAPI, SQL DB and FastAPI Backgro
 - Uses asynchronous SQLAlchemy sessions to handle database operations without blocking.
 - Aiohttp is used for non-blocking I/O operations when fetching images.
 - Aiofiles is used for asynchronus file writing.
+
+## Installation
+
+1. Clone this repository 
+2. Install python 3.12 (other versions might work, but haven't been tested)
+3. (Optional) Create a virtual python environment
+    ``` 
+    $ python -m venv .venv
+    $ source .venv/bin/activate
+    ```
+
+4. Install dependencies:
+    ```
+      pip install -r requirements.txt
+    ```
+## Running the Server
+    fastapi dev main.py
+
+## Hitting Endpoints
+You can visit http://localhost:8000/docs after running the fastapi server to hit the endpoints using a GUI.
