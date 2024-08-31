@@ -1,5 +1,5 @@
 - [Overview](https://github.com/Yaksham/ImageProcessor?tab=readme-ov-file#overview)
-- [Installation](https://github.com/Yaksham/ImageProcesso?tab=readme-ov-filer#installation)
+- [Installation](https://github.com/Yaksham/ImageProcesso?tab=readme-ov-file#installation)
 
 ## Overview
 
