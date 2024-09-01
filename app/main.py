@@ -4,7 +4,7 @@ import logging
 import traceback
 from uuid import uuid4
 
-from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks
+from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks, Form
 from fastapi.responses import StreamingResponse
 
 from db import Task, create_request, async_session, fetch_images_by_request_id, Product
@@ -16,11 +16,9 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 @app.post("/upload")
-async def upload_csv(background_tasks: BackgroundTasks, file: UploadFile = File(...), webhook_url: str = None):
+async def upload_csv(background_tasks: BackgroundTasks, file: UploadFile = File(...), webhook_url: str = Form(None)):
     # File Sanitization
     df = await validate_csv(file)
-    print(df)
-    # return
     request_id = str(uuid4())
 
     # Store validated data in DB
