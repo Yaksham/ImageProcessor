@@ -79,6 +79,7 @@ The project is a backend service built using FastAPI, SQL DB and FastAPI Backgro
 - **Task and Data Creation**:
   - A new task is created in the database with a unique request ID and associated webhook URL (if provided).
   - Products and images are extracted from the DataFrame and saved to the database.
+  - A request id is immediately returned while the images are processed asynchronusly in the background.
 
 - **Image Processing**:
   - Each image URL is fetched asynchronously using aiohttp, processed with Pillow (compressed to JPEG), and saved to the local file system.
