@@ -3,6 +3,9 @@
 
 ## Overview
 
+![diagram](https://github.com/user-attachments/assets/eb3acf86-b2fe-4880-8b89-349532841bfc)
+
+
 The project is a backend service built using FastAPI, SQL DB and FastAPI Background Tasks for async, non blocking processing. The application handles CSV uploads containing product and image URLs, processes images (including compression and transformation), and stores data in a SQLite database using SQLAlchemy with asynchronous support.
 
 ## Components
@@ -47,6 +50,9 @@ The project is a backend service built using FastAPI, SQL DB and FastAPI Backgro
  
     
 #### Database Schema
+
+![db_schema](https://github.com/user-attachments/assets/6bb22c35-7db1-4a4c-965d-449875320f34)
+
 
 - **Tasks Table**:
   - `task_id`: Primary key.
